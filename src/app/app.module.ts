@@ -9,6 +9,16 @@ import { HeaderComponent } from './layouts/full/header/header.component';
 import { SidebarComponent } from './layouts/full/sidebar/sidebar.component';
 import { FooterComponent } from './layouts/full/footer/footer.component';
 
+
+
+import { AccordionModule } from 'primeng/components/accordion/accordion';
+import { PanelModule } from 'primeng/components/panel/panel';
+import { ButtonModule } from 'primeng/components/button/button';
+import { RadioButtonModule } from 'primeng/components/radioButton/radioButton';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +30,9 @@ import { FooterComponent } from './layouts/full/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,    
   ],
   providers: [],
   bootstrap: [AppComponent]
