@@ -1,0 +1,113 @@
+
+.row {
+    .job-list {
+        margin: 2rem 0;
+        .job-card {
+            background: white;
+            box-shadow: -1px 5px 20px -15px rgba(0,0,0,0.75);
+            height: 100px;
+            margin: .4rem 0;
+            padding: .5rem;
+            position: relative;
+            img {
+                height: 80px;
+            }
+            .left-details {
+                padding: 0 0 0 .5rem;
+                h4 {
+                    font-weight: 800;
+                    font-size: 1.1rem;
+                    span {
+                        font-weight: 400;
+                        color: #c7d1da;
+                        font-size: .8rem;
+                    }
+                }
+                .company-link {
+                    background: #eff2f7;
+                    color: rgb(22, 22, 22);
+                    font-weight: 400;
+                    font-size: .8rem;
+                    padding: 5px; 
+                }
+            }
+        
+            .right-details {
+                font-size: .6rem;
+                position: relative;
+                height: 100%;
+                padding: 2.8rem 0;
+                .enjaz-button {
+                   position: absolute;
+                    right: 1rem;
+                    top: .5rem;
+                    font-size: 0.7rem;
+                    width: 60px;
+                    text-align: center;
+                }
+                span {
+                    color: #9199a5;
+                    margin: 0 .5rem;
+                }
+            }
+            
+          
+        }
+        
+    }
+
+    .show-more{
+        display: block;
+        max-width: 200px;
+        margin: auto;
+    }
+
+    @media (max-width: 768px) {
+        position: relative !important;
+        .content {
+            margin-top: 10rem !important;
+            .job-list {
+                .job-card {
+                    .left-details {
+                        h4 {
+                            font-size: .9rem;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .sidebar {
+            position: absolute !important;
+            top: 0 !important;
+        }
+    }
+
+    @media (max-width: 490px) {
+        .job-card {
+            img {
+                display: none;
+            }
+        }
+     }
+
+     @media (max-width: 415px) {
+        .job-card {
+            .right-details span {
+                display: block;
+                margin: 0rem !important;
+            }
+            .enjaz-button {
+                right: 0 !important;
+            }
+           
+        }
+     }
+
+
+
+}
+
+
+
+

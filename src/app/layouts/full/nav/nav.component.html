@@ -1,11 +1,12 @@
 <nav>
     <div class="container">
-        <div class="logo">
-        
-        </div>
-        <div class="links">
-            <a> Jobs </a>
-            <a> My Fav </a>
-        </div>
+          <div class="logo float-left">
+              <a [routerLink]="[ '/jobs' ]"><img src="assets/logo.png" /></a>
+          </div>
+
+          <div class="links float-right">
+              <a [routerLink]="[ '/jobs' ]" class="enjaz-button">  Jobs </a>
+              <a [routerLink]="[ '/favorite-jobs' ]" class="enjaz-button --danger"> My Favorites </a>
+          </div>
     </div>
 </nav>

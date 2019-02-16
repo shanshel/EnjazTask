@@ -1,0 +1,25 @@
+header {
+    text-align: center;
+    height: 230px;
+    background: linear-gradient(to bottom right,rgba(74, 88, 255, 0.85),rgba(74, 88, 255, .85)), url("../../../../assets/background.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    h1 {
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin: 3rem 0 .8rem;
+    }
+
+    .job-count {
+        color: white;
+        margin-top: 1rem;
+        text-align: center;
+        .job-count-number {
+            color: #cba259;
+            
+        }
+    }
+}

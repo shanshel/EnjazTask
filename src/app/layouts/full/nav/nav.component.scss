@@ -1,0 +1,57 @@
+nav {
+    background-color: #4250f0;
+    height: 70px;
+    color: white;
+
+    .logo {
+        padding-top: 10px;
+        img {
+            height: 50px;
+        }
+  
+    }
+
+    .links {
+        padding-top: 15px;
+        a {
+            
+            font-size: 1.05rem;
+            display: inline-block;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 1rem;
+        
+            &:last-child {
+                border-radius: 5px;
+            }
+
+           
+        }
+    }
+}
+@media (max-width: 450px) {
+    nav {
+        height: 140px;
+
+        .logo {
+            padding-top: 10px;
+            float: none !important;
+            display: block;
+            text-align: center;
+            img {
+                height: 50px;
+            }
+        }
+        .links {
+            float: none !important;
+            text-align: center;
+            a {
+                
+
+               
+            }
+        }
+    }
+
+    
+}

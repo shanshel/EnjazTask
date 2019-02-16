@@ -29,7 +29,8 @@
             "styles": [
               "src/assets/css/bootstrap.min.css",
               "node_modules/primeng/resources/primeng.min.css",
-              "node_modules/primeng/resources/themes/darkness/theme.css",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/kasper/theme.css",
               "src/styles.scss"
             ],
             "scripts": [],

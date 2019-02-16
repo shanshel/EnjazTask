@@ -1,1 +1,99 @@
-/* You can add global styles to this file, and also import other style files */
+@import './app/scss/variables';
+
+/* Global */
+html, body {
+    background: $background-color;
+}
+
+/* Inputs */
+.enjaz-input-group {
+    border: 0;
+    position: relative;
+    input {
+        border: 0;
+
+        &.--round {
+            border-radius: 30px;
+        }
+
+        &.--shadow {
+            box-shadow: -1px 9px 27px -5px rgba(0,0,0,0.75);
+        }
+    }
+
+    .input-icon{
+        position: absolute;
+        right: 20px;
+        top: 17%;
+        i {
+            color: lighten($info-color, 20%);
+        }
+    }
+
+}
+
+/* Buttons */
+.enjaz-button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    color: $white-color;
+    &:hover {
+        text-decoration: none;
+        color: $white-color;;
+    }
+    &.--danger {
+        background-color: $danger-color;
+        transition: all .4s;
+        &:hover {
+            background-color: darken($danger-color, 15%) ;
+            text-decoration: none;
+            color: $white-color;;
+        }
+    }
+    &.--success {
+        background-color: $success-color;
+        transition: all .4s;
+
+        &:hover {
+            background-color: darken($success-color, 15%) ;
+            text-decoration: none;
+            color: $white-color;;
+        }
+    }
+
+    &.--info {
+        background-color: $info-color;
+        transition: all .4s;
+
+        &:hover {
+            background-color: darken($info-color, 15%) ;
+            text-decoration: none;
+            color: $white-color;;
+        }
+    }
+ 
+
+    &.--radius {
+        border-radius: 100px;
+    }
+    
+   
+}
+
+/* Ngprime Injects */
+.countryinput {
+    width: 100% !important;
+    border: 0;
+    height: 3rem !important;
+    > label {
+        height: 3rem;
+        line-height: 2.5rem;
+        text-align: center;
+    }
+    &:focus {
+        box-shadow: none !important;
+        border:0 !important;
+    }
+}

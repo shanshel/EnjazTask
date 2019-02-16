@@ -1,3 +1,29 @@
-<p>
-  sidebar works!
-</p>
+<div class="filter-list">
+    <div class="filter-div">
+        <p> Location </p>
+        <div class="filter-content">
+            <div class="enjaz-input-group">
+                    <p-dropdown styleClass="countryinput" [options]="cities2" [(ngModel)]="selectedCity2" optionLabel="name"></p-dropdown>
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+<!-- TODO: Duplicate Search in Sidebar and Filter By hot search
+<div class="filter-div">
+    <p> Search </p>
+    <div class="filter-content">
+        <input />
+    </div>
+</div>
+
+<div class="filter-div">
+    <p> Hot Searchs </p>
+    <div class="filter-content">
+        <span>PHP</span>
+        <span>React</span>
+    </div>
+</div>
+
+-->
