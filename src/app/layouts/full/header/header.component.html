@@ -6,14 +6,14 @@
             <h1>Search for your Job with Enjaz</h1>
             <div class="search-input-div">
                 <div class="enjaz-input-group">
-                    <input type="text" class="form-control --round --shadow" placeholder="Search Job">
-                    <div class="input-icon">
+                    <input type="text" class="form-control --round --shadow" placeholder="Search Job" [(ngModel)]="search" (keyup.enter)="searching()">
+                    <div class="input-icon clickable" (click)="searching()">
                       <i class="fas fa-search"></i>
                     </div>
-                  </div>
+                </div>
             </div>
             <p class="job-count">
-              <span class="job-count-number"> 24 </span> 
+              <span class="job-count-number"> {{jobCount}} </span> 
               job offers found
             </p>
         </div>

@@ -4,7 +4,9 @@
 html, body {
     background: $background-color;
 }
-
+.clickable {
+    cursor: pointer;
+}
 /* Inputs */
 .enjaz-input-group {
     border: 0;

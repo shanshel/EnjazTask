@@ -1,12 +1,26 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class JobService {
   apiURL = "http://yousif.mandhom.com/github-jobs-proxy/proxy.php";
-  constructor(private http: HttpClient) { }
+
+  currentJobCounts : number = 0;
+  isSidebarVisible: number;
+  jobCountChange: Subject<number> = new Subject<number>();
+
+  constructor(private http: HttpClient) {
+
+   }
+
+  setJobCount(count:number) {
+      this.jobCountChange.next(count);
+  }
+
+
 
   getJobs(searchPram) {
 

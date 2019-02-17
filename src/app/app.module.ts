@@ -7,6 +7,7 @@ import { NavComponent } from './layouts/full/nav/nav.component';
 import { HeaderComponent } from './layouts/full/header/header.component';
 import { FooterComponent } from './layouts/full/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -23,7 +24,8 @@ import {HttpClientModule, HttpClient} from '@angular/common/http';
   imports: [
     BrowserAnimationsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
