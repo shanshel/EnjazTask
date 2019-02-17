@@ -1,66 +1,31 @@
 <div class="container">
+
     <div class="row">
         <div class="content col-sm-12 col-md-9 col-lg-8 offset-lg-1">
             <div class="job-list">
-              <div class="job-card">
-              <img src="https://via.placeholder.com/300" class="float-left" />
-              <div class="left-details float-left">
-                  <h4>Front end Developer <span>Google</span></h4> 
-                  <a class="company-link" href="">Company Link</a>
+                <app-loader *ngIf="loading"></app-loader>
+              
 
-              </div>
-      
-              <div class="right-details float-right">
-                  <a class="enjaz-button --success" href=""> Apply </a>
-                  <span class="date"><i class="far fa-clock"></i> 2 days ago</span>
-                  <span class="location"><i class="fas fa-map-marker-alt"></i> USA, Poland</span>
-              </div>
-              </div>
-      
-              <div class="job-card">
-                <img src="https://via.placeholder.com/300" class="float-left" />
+              <div class="job-card" *ngFor="let item of jobList; let i = index">
+                <ng-container *ngIf="item.company_logo">
+                    <img src="{{item.company_logo}}" class="float-left" />
+                </ng-container>
+                <ng-container *ngIf="!item.company_logo">
+                    <img src="assets/no-img.jpg" class="float-left" />
+                </ng-container>
                 <div class="left-details float-left">
-                    <h4>Front end Developer <span>Google</span></h4> 
-                    <a class="company-link" href="">Company Link</a>
-    
+                    <h4>{{item.title}} <span>{{item.company}}</span></h4> 
+                    
+                    <a class="company-link" >{{item.type}}</a>
                 </div>
         
                 <div class="right-details float-right">
                     <a class="enjaz-button --success" href=""> Apply </a>
-                    <span class="date"><i class="far fa-clock"></i> 2 days ago</span>
-                    <span class="location"><i class="fas fa-map-marker-alt"></i> USA, Poland</span>
+                    <span class="date"><i class="far fa-clock"></i> {{item.created_at | dateFormat}}</span>
+                    <span class="location"><i class="fas fa-map-marker-alt"></i> {{item.location}}</span>
                 </div>
-                </div>
+              </div>
       
-                <div class="job-card">
-                        <img src="https://via.placeholder.com/300" class="float-left" />
-                        <div class="left-details float-left">
-                            <h4>Front end Developer <span>Google</span></h4> 
-                            <a class="company-link" href="">Company Link</a>
-            
-                        </div>
-                
-                        <div class="right-details float-right">
-                            <a class="enjaz-button --success" href=""> Apply </a>
-                            <span class="date"><i class="far fa-clock"></i> 2 days ago</span>
-                            <span class="location"><i class="fas fa-map-marker-alt"></i> USA, Poland</span>
-                        </div>
-                        </div>
-
-                        <div class="job-card">
-                                <img src="https://via.placeholder.com/300" class="float-left" />
-                                <div class="left-details float-left">
-                                    <h4>Front end Developer <span>Google</span></h4> 
-                                    <a class="company-link" href="">Company Link</a>
-                    
-                                </div>
-                        
-                                <div class="right-details float-right">
-                                    <a class="enjaz-button --success" href=""> Apply </a>
-                                    <span class="date"><i class="far fa-clock"></i> 2 days ago</span>
-                                    <span class="location"><i class="fas fa-map-marker-alt"></i> USA, Poland</span>
-                                </div>
-                                </div>
           </div>
               <a class="show-more enjaz-button --info --radius" href=""> Show more jobs </a>
           </div>

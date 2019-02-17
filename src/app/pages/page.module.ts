@@ -13,17 +13,28 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
 import { DropdownModule } from 'primeng/dropdown';
 
 import { FormsModule } from '@angular/forms';
+import { JobDetailsPageComponent } from './job-details-page/job-details-page.component';
+import { MyFavoriteJobsPageComponent } from './my-favorite-jobs-page/my-favorite-jobs-page.component';
+import { dateFormat } from '../shared/pipes/date-format';
+import { LoaderComponent } from '../shared/components/loader/loader.component';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+
 @NgModule({
   declarations: [
     JobsPageComponent,
-    SidebarComponent
+    JobDetailsPageComponent,
+    SidebarComponent,
+    MyFavoriteJobsPageComponent,
+    dateFormat,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(PageRoutes),
     HttpClientModule,
     FormsModule,
-    DropdownModule
+    DropdownModule,
+    ProgressSpinnerModule
   ]
 })
 export class PageModule { }

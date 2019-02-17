@@ -10,10 +10,13 @@
             padding: .5rem;
             position: relative;
             img {
-                height: 80px;
+                width: 70px;
+                height: 70px;
+                image-rendering: pixelated;
             }
             .left-details {
                 padding: 0 0 0 .5rem;
+                max-width: 60%;
                 h4 {
                     font-weight: 800;
                     font-size: 1.1rem;
@@ -34,7 +37,8 @@
         
             .right-details {
                 font-size: .6rem;
-                position: relative;
+                position: absolute;
+                right: 1px;
                 height: 100%;
                 padding: 2.8rem 0;
                 .enjaz-button {
